@@ -25,7 +25,9 @@ namespace GuessTheNumber
             Console.WriteLine("Hello {0}! Hope you are good at guessing!", nInput);
 
             // The number user has to guess
-            int correctNum = 4;
+            Random random = new Random();
+
+            int correctNum = random.Next(1, 10);
 
             int guess = 0;
 
