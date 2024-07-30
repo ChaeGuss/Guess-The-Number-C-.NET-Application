@@ -34,6 +34,14 @@ namespace GuessTheNumber
             while (guess != correctNum) {
                 string uInput = Console.ReadLine();
 
+                if (!int.TryParse(uInput, out guess)) {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Please enter a number!");
+                    Console.ResetColor();
+
+                    continue;
+                }
+
                 guess = Int32.Parse(uInput);
 
                 if (guess != correctNum) {
